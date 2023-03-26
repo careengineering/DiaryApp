@@ -8,4 +8,10 @@
 "app_title" = "Diary App";
 "edit" = "Edit";
 "add" = "Add";
-
+"list_tab" = "List";
+"other_tab" = "Other";
+"add_diary" = "Add Diary";
+"diary_title" = "Diary Title";
+"diary_description" = "Diary Description";
+"emoji" = "Emoji";
+"select_emoji" = "Select Emoji";

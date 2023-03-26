@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct EmojiLabelView: View {
+    @Binding var emoji: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct EmojiLabelView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmojiLabelView()
+        HStack {
+            Text("select_emoji")
+                .foregroundColor(Color.primary)
+            Spacer()
+            Text(self.emoji)
+                .font(.title)
+            if self.emoji.isEmpty{
+                Text("🤩🥳🤓").font(.subheadline)
+            }
+            Image(systemName: "chevron.right").imageScale(.small).foregroundColor(.gray)
+        }
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FabButton: View {
+struct FabButtonView: View {
     var body: some View {
         Text("+")
             .foregroundColor(.white)
@@ -18,8 +18,8 @@ struct FabButton: View {
     }
 }
 
-struct FabButton_Previews: PreviewProvider {
+struct FabButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        FabButton()
+        FabButtonView()
     }
 }

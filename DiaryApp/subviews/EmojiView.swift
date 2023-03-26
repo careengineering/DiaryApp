@@ -6,15 +6,57 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct EmojiView: View {
+    @Binding var txt: String
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ZStack(alignment: .topLeading){
+                ScrollView(.vertical, showsIndicators: false) {                    
+                    VStack(spacing:15){
+                        ForEach(self.getEmojiList(), id: \.self){i in
+                            HStack (spacing: 15) {
+                                ForEach(i, id:\.self){j in
+                                    Button(action: {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                        self.txt = String(UnicodeScalar(j)!)
+                                    }) {
+                                        if
+                                            (UnicodeScalar(j)?.properties.isEmoji)!{
+                                            Text(String(UnicodeScalar(j)!))
+                                                .font(.system(size:36))
+                                        } else {
+                                            Text ("")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top)
+                }
+            }.navigationBarTitle(Text("select_emoji"), displayMode:.automatic)
+                .navigationBarItems(trailing: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }){
+                    Image(systemName: "xmark").foregroundColor(.gray)
+                })
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
-}
-
-struct EmojiView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmojiView()
+    
+    func getEmojiList() -> [[Int]] {
+        var emojis : [[Int]] = []
+        for i in stride(from: 0x1F601, to:0x1F64F, by: 4) {
+            var temp : [Int] = []
+            for j in i...i+4
+            {
+                temp.append(j)
+            }
+            emojis.append(temp)
+        }
+        return emojis
     }
 }

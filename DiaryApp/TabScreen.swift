@@ -9,7 +9,17 @@ import SwiftUI
 
 struct TabScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+                    ListScreen()
+                        .tabItem {
+                            Label("list_tab", systemImage: "list.dash")
+                        }
+
+                    OtherScreen()
+                        .tabItem {
+                            Label("other_tab", systemImage: "gear")
+                        }
+                }
     }
 }
 

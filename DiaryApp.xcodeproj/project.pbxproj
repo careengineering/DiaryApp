@@ -13,6 +13,15 @@
 		441F4B2729D071DE00CD954E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441F4B2629D071DE00CD954E /* Preview Assets.xcassets */; };
 		441F4B2929D071DE00CD954E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B2829D071DE00CD954E /* Persistence.swift */; };
 		441F4B2C29D071DE00CD954E /* DiaryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B2A29D071DE00CD954E /* DiaryApp.xcdatamodeld */; };
+		441F4B3529D0731500CD954E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 441F4B3729D0731500CD954E /* Localizable.strings */; };
+		441F4B3C29D076A200CD954E /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B3B29D076A200CD954E /* TabScreen.swift */; };
+		441F4B3E29D076B300CD954E /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B3D29D076B300CD954E /* ListScreen.swift */; };
+		441F4B4029D076C400CD954E /* OtherScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B3F29D076C400CD954E /* OtherScreen.swift */; };
+		441F4B4329D08EDD00CD954E /* FabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4229D08EDD00CD954E /* FabButtonView.swift */; };
+		441F4B4529D0913C00CD954E /* AddDiaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4429D0913C00CD954E /* AddDiaryScreen.swift */; };
+		441F4B4729D0C39900CD954E /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4629D0C39900CD954E /* EmojiView.swift */; };
+		441F4B4929D0CDE200CD954E /* EmojiLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */; };
+		441F4B4D29D0CF2A00CD954E /* notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4C29D0CF2A00CD954E /* notes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,16 @@
 		441F4B2829D071DE00CD954E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		441F4B2B29D071DE00CD954E /* DiaryApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryApp.xcdatamodel; sourceTree = "<group>"; };
 		441F4B2D29D071DE00CD954E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441F4B3629D0731500CD954E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		441F4B3829D0736800CD954E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		441F4B3B29D076A200CD954E /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
+		441F4B3D29D076B300CD954E /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		441F4B3F29D076C400CD954E /* OtherScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherScreen.swift; sourceTree = "<group>"; };
+		441F4B4229D08EDD00CD954E /* FabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabButtonView.swift; sourceTree = "<group>"; };
+		441F4B4429D0913C00CD954E /* AddDiaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryScreen.swift; sourceTree = "<group>"; };
+		441F4B4629D0C39900CD954E /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLabelView.swift; sourceTree = "<group>"; };
+		441F4B4C29D0CF2A00CD954E /* notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +59,7 @@
 		441F4B1329D071DD00CD954E = {
 			isa = PBXGroup;
 			children = (
+				441F4B4C29D0CF2A00CD954E /* notes.swift */,
 				441F4B1E29D071DD00CD954E /* DiaryApp */,
 				441F4B1D29D071DD00CD954E /* Products */,
 			);
@@ -56,13 +76,19 @@
 		441F4B1E29D071DD00CD954E /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				441F4B4129D08EC200CD954E /* subviews */,
 				441F4B1F29D071DD00CD954E /* DiaryAppApp.swift */,
 				441F4B2129D071DD00CD954E /* ContentView.swift */,
+				441F4B4429D0913C00CD954E /* AddDiaryScreen.swift */,
+				441F4B3B29D076A200CD954E /* TabScreen.swift */,
+				441F4B3D29D076B300CD954E /* ListScreen.swift */,
+				441F4B3F29D076C400CD954E /* OtherScreen.swift */,
 				441F4B2329D071DE00CD954E /* Assets.xcassets */,
 				441F4B2829D071DE00CD954E /* Persistence.swift */,
 				441F4B2D29D071DE00CD954E /* Info.plist */,
 				441F4B2A29D071DE00CD954E /* DiaryApp.xcdatamodeld */,
 				441F4B2529D071DE00CD954E /* Preview Content */,
+				441F4B3729D0731500CD954E /* Localizable.strings */,
 			);
 			path = DiaryApp;
 			sourceTree = "<group>";
@@ -73,6 +99,16 @@
 				441F4B2629D071DE00CD954E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		441F4B4129D08EC200CD954E /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				441F4B4229D08EDD00CD954E /* FabButtonView.swift */,
+				441F4B4629D0C39900CD954E /* EmojiView.swift */,
+				441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */,
+			);
+			path = subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +153,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 441F4B1329D071DD00CD954E;
 			productRefGroup = 441F4B1D29D071DD00CD954E /* Products */;
@@ -134,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				441F4B2729D071DE00CD954E /* Preview Assets.xcassets in Resources */,
+				441F4B3529D0731500CD954E /* Localizable.strings in Resources */,
 				441F4B2429D071DE00CD954E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,19 +184,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				441F4B2929D071DE00CD954E /* Persistence.swift in Sources */,
+				441F4B3E29D076B300CD954E /* ListScreen.swift in Sources */,
 				441F4B2229D071DD00CD954E /* ContentView.swift in Sources */,
+				441F4B4D29D0CF2A00CD954E /* notes.swift in Sources */,
+				441F4B4529D0913C00CD954E /* AddDiaryScreen.swift in Sources */,
 				441F4B2029D071DD00CD954E /* DiaryAppApp.swift in Sources */,
+				441F4B3C29D076A200CD954E /* TabScreen.swift in Sources */,
 				441F4B2C29D071DE00CD954E /* DiaryApp.xcdatamodeld in Sources */,
+				441F4B4029D076C400CD954E /* OtherScreen.swift in Sources */,
+				441F4B4329D08EDD00CD954E /* FabButtonView.swift in Sources */,
+				441F4B4729D0C39900CD954E /* EmojiView.swift in Sources */,
+				441F4B4929D0CDE200CD954E /* EmojiLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		441F4B3729D0731500CD954E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				441F4B3629D0731500CD954E /* en */,
+				441F4B3829D0736800CD954E /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		441F4B2E29D071DE00CD954E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -219,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

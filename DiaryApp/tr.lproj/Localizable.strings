@@ -5,7 +5,13 @@
   Created by Çare C. on 26.03.2023.
   
 */
-"app_title" = "Diary App";
-"edit" = "Edit";
-"add" = "Add";
-
+"app_title" = "Günlük Uygulaması";
+"edit" = "Düzenle";
+"add" = "Ekle";
+"list_tab" = "Liste";
+"other_tab" = "Ayarlar";
+"add_diary" = "Günlük Ekle";
+"diary_title" = "Başlık";
+"diary_description" = "Açıklama";
+"emoji" = "Ruh Hali";
+"select_emoji" = "Emoji Seç";

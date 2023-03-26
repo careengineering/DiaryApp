@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+
+//1:18:50 de kaldım
