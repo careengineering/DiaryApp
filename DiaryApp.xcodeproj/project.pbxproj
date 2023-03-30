@@ -22,6 +22,10 @@
 		441F4B4729D0C39900CD954E /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4629D0C39900CD954E /* EmojiView.swift */; };
 		441F4B4929D0CDE200CD954E /* EmojiLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */; };
 		441F4B4D29D0CF2A00CD954E /* notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F4B4C29D0CF2A00CD954E /* notes.swift */; };
+		446FE9B329D60AB900DE16BF /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446FE9B229D60AB900DE16BF /* AlertViewModel.swift */; };
+		446FE9B629D6115900DE16BF /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 446FE9B529D6115900DE16BF /* Localize_Swift */; };
+		446FE9B829D6135000DE16BF /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446FE9B729D6135000DE16BF /* DetailScreen.swift */; };
+		446FE9BB29D6140900DE16BF /* DiaryItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446FE9BA29D6140900DE16BF /* DiaryItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,9 @@
 		441F4B4629D0C39900CD954E /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLabelView.swift; sourceTree = "<group>"; };
 		441F4B4C29D0CF2A00CD954E /* notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notes.swift; sourceTree = "<group>"; };
+		446FE9B229D60AB900DE16BF /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		446FE9B729D6135000DE16BF /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		446FE9BA29D6140900DE16BF /* DiaryItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446FE9B629D6115900DE16BF /* Localize_Swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +84,11 @@
 		441F4B1E29D071DD00CD954E /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
-				441F4B4129D08EC200CD954E /* subviews */,
+				446FE9B929D613E400DE16BF /* Row */,
+				446FE9B129D60A0200DE16BF /* ViewModel */,
+				441F4B4129D08EC200CD954E /* SubViews */,
 				441F4B1F29D071DD00CD954E /* DiaryAppApp.swift */,
+				446FE9B729D6135000DE16BF /* DetailScreen.swift */,
 				441F4B2129D071DD00CD954E /* ContentView.swift */,
 				441F4B4429D0913C00CD954E /* AddDiaryScreen.swift */,
 				441F4B3B29D076A200CD954E /* TabScreen.swift */,
@@ -101,14 +112,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		441F4B4129D08EC200CD954E /* subviews */ = {
+		441F4B4129D08EC200CD954E /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
 				441F4B4229D08EDD00CD954E /* FabButtonView.swift */,
 				441F4B4629D0C39900CD954E /* EmojiView.swift */,
 				441F4B4829D0CDE200CD954E /* EmojiLabelView.swift */,
 			);
-			path = subviews;
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		446FE9B129D60A0200DE16BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				446FE9B229D60AB900DE16BF /* AlertViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		446FE9B929D613E400DE16BF /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				446FE9BA29D6140900DE16BF /* DiaryItemRow.swift */,
+			);
+			path = Row;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +154,9 @@
 			dependencies = (
 			);
 			name = DiaryApp;
+			packageProductDependencies = (
+				446FE9B529D6115900DE16BF /* Localize_Swift */,
+			);
 			productName = DiaryApp;
 			productReference = 441F4B1C29D071DD00CD954E /* DiaryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +186,9 @@
 				tr,
 			);
 			mainGroup = 441F4B1329D071DD00CD954E;
+			packageReferences = (
+				446FE9B429D6115900DE16BF /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+			);
 			productRefGroup = 441F4B1D29D071DD00CD954E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +220,7 @@
 				441F4B3E29D076B300CD954E /* ListScreen.swift in Sources */,
 				441F4B2229D071DD00CD954E /* ContentView.swift in Sources */,
 				441F4B4D29D0CF2A00CD954E /* notes.swift in Sources */,
+				446FE9B329D60AB900DE16BF /* AlertViewModel.swift in Sources */,
 				441F4B4529D0913C00CD954E /* AddDiaryScreen.swift in Sources */,
 				441F4B2029D071DD00CD954E /* DiaryAppApp.swift in Sources */,
 				441F4B3C29D076A200CD954E /* TabScreen.swift in Sources */,
@@ -194,6 +228,8 @@
 				441F4B4029D076C400CD954E /* OtherScreen.swift in Sources */,
 				441F4B4329D08EDD00CD954E /* FabButtonView.swift in Sources */,
 				441F4B4729D0C39900CD954E /* EmojiView.swift in Sources */,
+				446FE9B829D6135000DE16BF /* DetailScreen.swift in Sources */,
+				446FE9BB29D6140900DE16BF /* DiaryItemRow.swift in Sources */,
 				441F4B4929D0CDE200CD954E /* EmojiLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		446FE9B429D6115900DE16BF /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Localize-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		446FE9B529D6115900DE16BF /* Localize_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 446FE9B429D6115900DE16BF /* XCRemoteSwiftPackageReference "Localize-Swift" */;
+			productName = Localize_Swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		441F4B2A29D071DE00CD954E /* DiaryApp.xcdatamodeld */ = {

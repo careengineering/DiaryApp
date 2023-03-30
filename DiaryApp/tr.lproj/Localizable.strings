@@ -8,10 +8,13 @@
 "app_title" = "Günlük Uygulaması";
 "edit" = "Düzenle";
 "add" = "Ekle";
-"list_tab" = "Liste";
+"list_tab" = "Günlüğüm";
 "other_tab" = "Ayarlar";
 "add_diary" = "Günlük Ekle";
 "diary_title" = "Başlık";
 "diary_description" = "Açıklama";
 "emoji" = "Ruh Hali";
 "select_emoji" = "Emoji Seç";
+"ok" = "Tamam";
+"empty_title_alert" = "Başlık girilmedi";
+"empty_title_alert_message" = "Başlık boş geçilemez";

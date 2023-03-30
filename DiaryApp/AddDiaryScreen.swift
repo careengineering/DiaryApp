@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import Localize_Swift
 
 struct AddDiaryScreen: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
     
+    @EnvironmentObject var alertViewModel: AlertViewModel
+    
     @State var title: String = ""
     @State var description: String = ""
     @State var emoji: String = ""
-    @State private var showEmojiView = false
+    @State var showEmojiView = false
     
     var body: some View {
         Form {
@@ -31,11 +34,22 @@ struct AddDiaryScreen: View {
 //            TextField("emoji", text: $emoji)
         }.navigationBarItems(trailing:
         Button (action: {
-            addItem()
-            presentationMode.wrappedValue.dismiss()
+            if title.isEmpty {
+                self.alertViewModel.showAlert(title: "empty_title_alert".localized(), message: "empty_title_alert_message".localized())
+            } else {
+                addItem()
+                presentationMode.wrappedValue.dismiss()
+            }
+            
         }, label: {
             Image(systemName: "plus.square")
-        })).navigationTitle(Text("add_diary"))
+        })
+            .alert(isPresented: $alertViewModel.showAlert) {
+                Alert(title: Text(alertViewModel.title), message: Text(alertViewModel.message), dismissButton: .default(Text(alertViewModel.defaultButtonTitle)))
+                
+            }
+                
+                ).navigationTitle(Text("add_diary"))
     }
     
     private func addItem() {

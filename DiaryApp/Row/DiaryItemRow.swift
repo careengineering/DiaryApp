@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DiaryRow: View {
+struct DiaryItemRow: View {
     var item: Item
     var itemFormatter: DateFormatter
     var body: some View {

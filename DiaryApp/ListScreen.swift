@@ -28,14 +28,10 @@ struct ListScreen: View {
                 
                 List{
                     ForEach(items) { item in
-                        HStack {
-                            Text(item.emoji ?? "").font(.title)
-                            VStack (alignment: .leading) {
-                                Text(item.detail ?? "").font(.headline)
-                                Text(item.title ?? "").foregroundColor(.secondary)
-                                Text("\(item.timestamp!, formatter: itemFormatter)")
-                            }
+                        NavigationLink.init(destination: DetailScreen.init(item: item)){
+                            DiaryItemRow(item: item, itemFormatter: itemFormatter)
                         }
+                        
                        
                         
                     }

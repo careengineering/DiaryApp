@@ -8,10 +8,14 @@
 "app_title" = "Diary App";
 "edit" = "Edit";
 "add" = "Add";
-"list_tab" = "List";
+"list_tab" = "My Diary";
 "other_tab" = "Other";
 "add_diary" = "Add Diary";
 "diary_title" = "Diary Title";
 "diary_description" = "Diary Description";
 "emoji" = "Emoji";
 "select_emoji" = "Select Emoji";
+"ok" = "OK";
+"empty_title_alert" = "Empty Title";
+"empty_title_alert_message" = "Title can not be empty";
+
